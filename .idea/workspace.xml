@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8991e764-8041-4cf0-b41b-f131350a4501" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="8991e764-8041-4cf0-b41b-f131350a4501" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/sa.edu.ksu.ftc_backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/sa.edu.ksu.ftc_backend.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/sa.edu.ksu.ftc_backend.test.iml" beforeDir="false" />
+    </list>
+>>>>>>> master
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -24,6 +32,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sa/edu/ksu/ftc_backend/Model/User.java">
@@ -116,6 +125,9 @@
         </entry>
       </file>
     </leaf>
+=======
+    <leaf />
+>>>>>>> master
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -207,16 +219,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548014800480</updated>
+<<<<<<< HEAD
       <workItem from="1548014805109" duration="1856000" />
+=======
+      <workItem from="1548014805109" duration="2478000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="2478000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+>>>>>>> master
     <layout>
       <window_info id="Web" side_tool="true" />
       <window_info id="Designer" />
@@ -311,7 +334,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sa/edu/ksu/ftc_backend/Model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
+<<<<<<< HEAD
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+=======
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
