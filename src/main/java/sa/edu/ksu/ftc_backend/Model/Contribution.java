@@ -10,4 +10,5 @@ public class Contribution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
 }

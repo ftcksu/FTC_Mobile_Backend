@@ -1,0 +1,15 @@
+type SocialProfile {
+    id: ID!
+    type: String
+    value:String
+    user: User
+}
+
+extend type Query {
+    findAllSocialProfiles: [SocialProfile]!
+}
+
+extend type Mutation {
+    newSocialProfile(type: String!,user:ID!,value:String!):SocialProfile!
+    updateSocialProfileValue(value:String!,id:ID!):SocialProfile
+}

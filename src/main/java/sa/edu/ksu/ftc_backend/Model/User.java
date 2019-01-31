@@ -1,8 +1,12 @@
 package sa.edu.ksu.ftc_backend.Model;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
 
@@ -46,6 +50,7 @@ public class User {
     private String email;
 
     @NotEmpty
+    @JsonIgnore
     private String password;
 
     @OneToMany(mappedBy = "user")
@@ -54,6 +59,14 @@ public class User {
     private String deviceId;
 
     private String bio;
+
+    @OneToMany(mappedBy = "user")
+    private List<Quotes> quotes;
+
+    @OneToMany(mappedBy = "user")
+    private List<Points> points;
+
+    private List<EventParticipant>
 
 
     public String getId() {
