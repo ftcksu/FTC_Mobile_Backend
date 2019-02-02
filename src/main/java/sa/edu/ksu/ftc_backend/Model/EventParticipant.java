@@ -1,40 +1,44 @@
 package sa.edu.ksu.ftc_backend.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class EventParticipant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
 
-    private User user;
+    @ManyToOne
+    private Account account;
+
+    @ManyToOne
     private Event event;
     private ParticipantType type;
+
+    @OneToMany(mappedBy = "participant")
+    private List<Points> points;
 
 
     public EventParticipant() {
     }
 
-    public EventParticipant(User user, Event event, ParticipantType type) {
-        this.user = user;
+    public EventParticipant(Account account, Event event, ParticipantType type) {
+        this.account = account;
         this.event = event;
         this.type = type;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public User getUser() {
-        return user;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
 

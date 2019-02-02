@@ -10,15 +10,15 @@ public class SocialProfile {
     public SocialProfile() {
     }
 
-    public SocialProfile(@NotEmpty @Size(max = 40) String type, @NotEmpty @Size(max = 80) String value, User user) {
+    public SocialProfile(@NotEmpty @Size(max = 40) String type, @NotEmpty @Size(max = 80) String value, Account account) {
         this.type = type;
         this.value = value;
-        this.user = user;
+        this.account = account;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
 
     @NotEmpty
     @Size(max = 40)
@@ -29,13 +29,13 @@ public class SocialProfile {
     private String value;
 
     @ManyToOne
-    private User user;
+    private Account account;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -55,11 +55,11 @@ public class SocialProfile {
         this.value = value;
     }
 
-    public User getUser() {
-        return user;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }

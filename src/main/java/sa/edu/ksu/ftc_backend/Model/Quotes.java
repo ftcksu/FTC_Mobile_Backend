@@ -3,32 +3,31 @@ package sa.edu.ksu.ftc_backend.Model;
 import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 @Entity
 public class Quotes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
     @NotEmpty
     private String value;
     @Valid
     @ManyToOne
-    private User user;
+    private Account account;
 
     public Quotes() {
     }
 
-    public Quotes(@NotEmpty String value, @Valid User user) {
+    public Quotes(@NotEmpty String value, @Valid Account account) {
         this.value = value;
-        this.user = user;
+        this.account = account;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -40,11 +39,11 @@ public class Quotes {
         this.value = value;
     }
 
-    public User getUser() {
-        return user;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setUser(@Valid User user) {
-        this.user = user;
+    public void setAccount(@Valid Account account) {
+        this.account = account;
     }
 }

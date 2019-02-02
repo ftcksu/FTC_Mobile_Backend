@@ -2,23 +2,20 @@ package sa.edu.ksu.ftc_backend.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
 @Table(name="Account")
-public class User {
+public class Account {
 
-    public User() {
+    public Account() {
 
     }
 
-    public User(String id, String firstName, String lastName, String studentId, String email, String password, List<SocialProfile> socialProfile, String deviceId, String bio) {
+    public Account(Integer id, String firstName, String lastName, String studentId, String email, String password, List<SocialProfile> socialProfile, String deviceId, String bio) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -31,8 +28,8 @@ public class User {
     }
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @NotEmpty
     @Size(max = 30)
@@ -53,27 +50,25 @@ public class User {
     @JsonIgnore
     private String password;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "account")
     private List<SocialProfile> socialProfile;
 
     private String deviceId;
 
     private String bio;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "account")
     private List<Quotes> quotes;
 
-    @OneToMany(mappedBy = "user")
-    private List<Points> points;
-
-    private List<EventParticipant>
+    @OneToMany(mappedBy = "account")
+    private List<EventParticipant> participations;
 
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -141,9 +136,25 @@ public class User {
         this.bio = bio;
     }
 
+    public List<Quotes> getQuotes() {
+        return quotes;
+    }
+
+    public void setQuotes(List<Quotes> quotes) {
+        this.quotes = quotes;
+    }
+
+    public List<EventParticipant> getParticipations() {
+        return participations;
+    }
+
+    public void setParticipations(List<EventParticipant> participations) {
+        this.participations = participations;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
+        return "Account{" +
                 "id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
@@ -153,8 +164,8 @@ public class User {
                 ", socialProfile=" + socialProfile +
                 ", deviceId='" + deviceId + '\'' +
                 ", bio='" + bio + '\'' +
+                ", quotes=" + quotes +
+                ", participations=" + participations +
                 '}';
     }
-
-
 }

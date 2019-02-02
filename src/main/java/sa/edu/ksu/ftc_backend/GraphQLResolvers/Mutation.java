@@ -1,47 +1,53 @@
 package sa.edu.ksu.ftc_backend.GraphQLResolvers;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
+import sa.edu.ksu.ftc_backend.Model.Account;
 import sa.edu.ksu.ftc_backend.Model.SocialProfile;
-import sa.edu.ksu.ftc_backend.Model.User;
 import sa.edu.ksu.ftc_backend.Repository.SocialProfileRepository;
-import sa.edu.ksu.ftc_backend.Repository.UserRepository;
+import sa.edu.ksu.ftc_backend.Repository.AccountRepository;
 
 import java.util.Optional;
 
 public class Mutation implements GraphQLMutationResolver {
 
 
-    private UserRepository userRepository;
+    private AccountRepository accountRepository;
     private SocialProfileRepository socialProfileRepository;
 
-    public Mutation(UserRepository userRepository,SocialProfileRepository socialProfileRepository){
-        this.userRepository = userRepository;
+    public Mutation(AccountRepository accountRepository, SocialProfileRepository socialProfileRepository){
+        this.accountRepository = accountRepository;
         this.socialProfileRepository = socialProfileRepository;
     }
 
-    public User newUser(String firstName,String lastName){
-        User user = new User();
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
+    public Account newAccount(String firstName, String lastName,String studentId,String email,String password
+            ,String deviceId, String bio){
+        Account account = new Account();
+        account.setFirstName(firstName);
+        account.setLastName(lastName);
+        account.setStudentId(studentId);
+        account.setEmail(email);
+        account.setPassword(password);
+        account.setDeviceId(deviceId);
+        account.setBio(bio);
 
-        return userRepository.save(user);
+        return accountRepository.save(account);
     }
 
-    public SocialProfile newSocialProfile(String type,String userId,String value) throws Exception{
+    public SocialProfile newSocialProfile(String type,Integer accountId,String value) throws Exception{
         SocialProfile newSocialProfile = new SocialProfile();
         newSocialProfile.setType(type);
-        Optional<User> user = userRepository.findById(userId);
-        if (!user.isPresent()){
-            throw new Exception("user can not be null");
+        Optional<Account> account = accountRepository.findById(accountId);
+        if (!account.isPresent()){
+            throw new Exception("account can not be null");
         }
-        newSocialProfile.setUser(user.get());
+        newSocialProfile.setAccount(account.get());
         newSocialProfile.setValue(value);
         socialProfileRepository.save(newSocialProfile);
 
         return socialProfileRepository.save(newSocialProfile);
     }
 
-    public SocialProfile updateSocialProfileValue(String value,String id) throws Exception{
+    public SocialProfile updateSocialProfileValue(String value,Integer id) throws Exception{
         Optional<SocialProfile> socialProfile = socialProfileRepository.findById(id);
         if(!socialProfile.isPresent()){
             throw new Exception("there is not a socialProfile with id :" +id);

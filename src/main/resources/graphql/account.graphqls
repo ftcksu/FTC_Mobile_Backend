@@ -1,0 +1,18 @@
+type Account {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    studentId: String!
+    email: String!
+    password: String!
+    deviceId: String!
+    bio: String!
+}
+
+type Query  {
+    findAllAccounts: [Account]!
+}
+
+type Mutation {
+    newAccount(firstName: String!, lastName: String!,studentId: String!,email: String!,password: String!,deviceId: String!,bio: String!) : Account!
+}

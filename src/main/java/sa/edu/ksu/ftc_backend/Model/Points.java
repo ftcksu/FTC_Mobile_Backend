@@ -2,51 +2,57 @@ package sa.edu.ksu.ftc_backend.Model;
 
 import javax.persistence.*;
 import javax.validation.Valid;
+import java.util.List;
 
 @Entity
 public class Points {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
     @Valid
     @ManyToOne
-    private User user;
+    private EventParticipant participant;
     private int value;
 
-    private Event event;
-
-    private boolean isApprovedByadmin;
+    private boolean isApprovedByAdmin;
     private boolean isApprovedByLeader;
-    private String decription;
+    private String description;
 
     public Points() {
-        this.isApprovedByadmin=false;
+        this.isApprovedByAdmin =false;
         this.isApprovedByLeader=false;
     }
 
-    public Points(@Valid User user, int value, Event event, boolean isApprovedByadmin, boolean isApprovedByLeader, String decription) {
-        this.user = user;
+    public Points(@Valid EventParticipant participant, int value, List<EventParticipant> event, boolean isApprovedByAdmin, boolean isApprovedByLeader, String description) {
+        this.participant = participant;
         this.value = value;
-        this.event = event;
-        this.isApprovedByadmin = isApprovedByadmin;
+        this.isApprovedByAdmin = isApprovedByAdmin;
         this.isApprovedByLeader = isApprovedByLeader;
-        this.decription = decription;
+        this.description = description;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public EventParticipant getParticipant() {
+        return participant;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setParticipant(EventParticipant participant) {
+        this.participant = participant;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getValue() {
@@ -57,20 +63,12 @@ public class Points {
         this.value = value;
     }
 
-    public Event getEvent() {
-        return event;
+    public boolean isApprovedByAdmin() {
+        return isApprovedByAdmin;
     }
 
-    public void setEvent(Event event) {
-        this.event = event;
-    }
-
-    public boolean isApprovedByadmin() {
-        return isApprovedByadmin;
-    }
-
-    public void setApprovedByadmin(boolean approvedByadmin) {
-        isApprovedByadmin = approvedByadmin;
+    public void setApprovedByAdmin(boolean approvedByAdmin) {
+        isApprovedByAdmin = approvedByAdmin;
     }
 
     public boolean isApprovedByLeader() {
@@ -81,11 +79,11 @@ public class Points {
         isApprovedByLeader = approvedByLeader;
     }
 
-    public String getDecription() {
-        return decription;
+    public String getDescriptions() {
+        return description;
     }
 
-    public void setDecription(String decription) {
-        this.decription = decription;
+    public void setDescriptions(String description) {
+        this.description = description;
     }
 }
