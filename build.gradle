@@ -26,14 +26,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    // https://mvnrepository.com/artifact/com.graphql-java/graphql-spring-boot-starter
-    compile group: 'com.graphql-java', name: 'graphql-spring-boot-starter', version: '5.0.2'
-    // https://mvnrepository.com/artifact/com.graphql-java/graphql-java
-    implementation group: 'com.graphql-java', name: 'graphql-java', version: '11.0'
-    // https://mvnrepository.com/artifact/com.graphql-java/graphql-java-tools
-    implementation group: 'com.graphql-java', name: 'graphql-java-tools', version: '5.2.4'
-    // https://mvnrepository.com/artifact/com.graphql-java/graphql-java-servlet
-    implementation group: 'com.graphql-java', name: 'graphql-java-servlet', version: '6.1.3'
+
     implementation group: 'javax.xml.bind', name: 'jaxb-api'
 
     runtimeOnly 'org.postgresql:postgresql'

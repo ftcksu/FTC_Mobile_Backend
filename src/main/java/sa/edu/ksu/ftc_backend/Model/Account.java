@@ -47,7 +47,6 @@ public class Account {
     private String email;
 
     @NotEmpty
-    @JsonIgnore
     private String password;
 
     @OneToMany(mappedBy = "account")
