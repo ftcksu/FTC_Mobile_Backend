@@ -6,6 +6,8 @@ import sa.edu.ksu.ftc_backend.Model.Account;
 import sa.edu.ksu.ftc_backend.Repository.SocialProfileRepository;
 import sa.edu.ksu.ftc_backend.Repository.AccountRepository;
 
+import java.util.Optional;
+
 public class Query implements GraphQLQueryResolver {
 
     private AccountRepository accountRepository;
@@ -24,5 +26,5 @@ public class Query implements GraphQLQueryResolver {
         return socialProfileRepository.findAll();
     }
 
-
+    public Optional<Account> findAccountById(Integer id){return accountRepository.findById(id);}
 }

@@ -9,10 +9,23 @@ type Account {
     bio: String!
 }
 
+input AccountInput {
+    id: ID!
+    firstName: String
+    lastName: String
+    email: String
+    password: String
+    deviceId: String
+    bio: String
+}
+
 type Query  {
     findAllAccounts: [Account]!
+    findAccountById(id: ID!): Account
 }
 
 type Mutation {
-    newAccount(firstName: String!, lastName: String!,studentId: String!,email: String!,password: String!,deviceId: String!,bio: String!) : Account!
+    createAccount(firstName: String!, lastName: String!,studentId: String!,email: String!,password: String!,deviceId: String!,bio: String!) : Account!
+    updateAccount(account: AccountInput!) : Account!
+    deleteAccount(id: ID!) : Boolean
 }
