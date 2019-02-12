@@ -55,7 +55,7 @@ public class AccountServiceImp implements AccountService{
     }
 
     @Override
-    public void delete(Integer id) {
+    public void delete(@NotNull Integer id) {
         accountRepository.deleteById(id);
     }
 
