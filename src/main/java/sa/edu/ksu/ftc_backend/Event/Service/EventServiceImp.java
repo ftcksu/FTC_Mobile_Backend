@@ -1,11 +1,11 @@
-package sa.edu.ksu.ftc_backend.Service.Event;
+package sa.edu.ksu.ftc_backend.Event.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sa.edu.ksu.ftc_backend.Model.Event;
-import sa.edu.ksu.ftc_backend.Model.EventStatus;
-import sa.edu.ksu.ftc_backend.Model.EventType;
-import sa.edu.ksu.ftc_backend.Repository.EventRepository;
+import sa.edu.ksu.ftc_backend.Event.Event;
+import sa.edu.ksu.ftc_backend.Event.EventStatus;
+import sa.edu.ksu.ftc_backend.Event.EventType;
+import sa.edu.ksu.ftc_backend.Event.EventRepository;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;

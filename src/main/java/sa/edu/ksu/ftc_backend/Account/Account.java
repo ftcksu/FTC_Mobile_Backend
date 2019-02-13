@@ -1,6 +1,8 @@
-package sa.edu.ksu.ftc_backend.Model;
+package sa.edu.ksu.ftc_backend.Account;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import sa.edu.ksu.ftc_backend.Event.Participant.EventParticipant;
+import sa.edu.ksu.ftc_backend.Account.Quetes.Quotes;
+import sa.edu.ksu.ftc_backend.Account.SocialProfile.SocialProfile;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

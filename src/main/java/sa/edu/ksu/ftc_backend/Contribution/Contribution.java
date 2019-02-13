@@ -1,4 +1,4 @@
-package sa.edu.ksu.ftc_backend.Model;
+package sa.edu.ksu.ftc_backend.Contribution;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

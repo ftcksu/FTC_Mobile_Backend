@@ -1,4 +1,6 @@
-package sa.edu.ksu.ftc_backend.Model;
+package sa.edu.ksu.ftc_backend.Account.Quetes;
+
+import sa.edu.ksu.ftc_backend.Account.Account;
 
 import javax.persistence.*;
 import javax.validation.Valid;

@@ -1,5 +1,5 @@
-package sa.edu.ksu.ftc_backend.Service.Account;
-import sa.edu.ksu.ftc_backend.Model.Account;
+package sa.edu.ksu.ftc_backend.Account.Service;
+import sa.edu.ksu.ftc_backend.Account.Account;
 import java.util.Optional;
 
 public interface AccountService {

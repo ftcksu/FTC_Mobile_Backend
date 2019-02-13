@@ -1,4 +1,6 @@
-package sa.edu.ksu.ftc_backend.Model;
+package sa.edu.ksu.ftc_backend.Points;
+
+import sa.edu.ksu.ftc_backend.Event.Participant.EventParticipant;
 
 import javax.persistence.*;
 import javax.validation.Valid;

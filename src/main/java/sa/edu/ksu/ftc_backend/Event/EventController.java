@@ -1,14 +1,10 @@
-package sa.edu.ksu.ftc_backend.Controller;
+package sa.edu.ksu.ftc_backend.Event;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpClientErrorException;
-import sa.edu.ksu.ftc_backend.Model.Event;
-import sa.edu.ksu.ftc_backend.Model.EventStatus;
-import sa.edu.ksu.ftc_backend.Model.EventType;
-import sa.edu.ksu.ftc_backend.Service.Event.EventService;
+import sa.edu.ksu.ftc_backend.Event.Service.EventService;
 
 import javax.validation.Valid;
 

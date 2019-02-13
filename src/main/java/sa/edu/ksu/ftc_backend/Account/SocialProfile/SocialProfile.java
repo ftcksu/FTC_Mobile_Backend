@@ -1,4 +1,6 @@
-package sa.edu.ksu.ftc_backend.Model;
+package sa.edu.ksu.ftc_backend.Account.SocialProfile;
+
+import sa.edu.ksu.ftc_backend.Account.Account;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

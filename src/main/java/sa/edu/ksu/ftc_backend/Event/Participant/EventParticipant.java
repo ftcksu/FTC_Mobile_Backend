@@ -1,4 +1,8 @@
-package sa.edu.ksu.ftc_backend.Model;
+package sa.edu.ksu.ftc_backend.Event.Participant;
+
+import sa.edu.ksu.ftc_backend.Account.Account;
+import sa.edu.ksu.ftc_backend.Event.Event;
+import sa.edu.ksu.ftc_backend.Points.Points;
 
 import javax.persistence.*;
 import java.util.List;

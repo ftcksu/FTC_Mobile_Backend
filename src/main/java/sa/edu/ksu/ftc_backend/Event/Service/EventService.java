@@ -1,7 +1,7 @@
-package sa.edu.ksu.ftc_backend.Service.Event;
-import sa.edu.ksu.ftc_backend.Model.Event;
-import sa.edu.ksu.ftc_backend.Model.EventStatus;
-import sa.edu.ksu.ftc_backend.Model.EventType;
+package sa.edu.ksu.ftc_backend.Event.Service;
+import sa.edu.ksu.ftc_backend.Event.Event;
+import sa.edu.ksu.ftc_backend.Event.EventStatus;
+import sa.edu.ksu.ftc_backend.Event.EventType;
 
 import java.util.Optional;
 

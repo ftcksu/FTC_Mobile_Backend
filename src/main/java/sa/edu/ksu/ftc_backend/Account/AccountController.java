@@ -1,11 +1,10 @@
-package sa.edu.ksu.ftc_backend.Controller;
+package sa.edu.ksu.ftc_backend.Account;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import sa.edu.ksu.ftc_backend.Model.Account;
-import sa.edu.ksu.ftc_backend.Service.Account.AccountService;
+import sa.edu.ksu.ftc_backend.Account.Service.AccountService;
 
 import javax.validation.Valid;
 

@@ -1,9 +1,9 @@
-package sa.edu.ksu.ftc_backend.Service.Account;
+package sa.edu.ksu.ftc_backend.Account.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sa.edu.ksu.ftc_backend.Model.Account;
-import sa.edu.ksu.ftc_backend.Repository.AccountRepository;
+import sa.edu.ksu.ftc_backend.Account.Account;
+import sa.edu.ksu.ftc_backend.Account.AccountRepository;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;

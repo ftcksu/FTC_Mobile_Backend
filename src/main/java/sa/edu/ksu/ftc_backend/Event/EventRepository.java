@@ -1,9 +1,9 @@
-package sa.edu.ksu.ftc_backend.Repository;
+package sa.edu.ksu.ftc_backend.Event;
 
 import org.springframework.data.repository.CrudRepository;
-import sa.edu.ksu.ftc_backend.Model.Event;
-import sa.edu.ksu.ftc_backend.Model.EventStatus;
-import sa.edu.ksu.ftc_backend.Model.EventType;
+import sa.edu.ksu.ftc_backend.Event.Event;
+import sa.edu.ksu.ftc_backend.Event.EventStatus;
+import sa.edu.ksu.ftc_backend.Event.EventType;
 
 import java.util.List;
 
